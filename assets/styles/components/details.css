@@ -10,7 +10,7 @@ details{
       width: var(--size-l);
       height: var(--size-l);
       padding-right: var(--size-xxs);
-      color: var(--interaction-color);
+      color: var(--color-pink);
       content: "chevron_right";
       direction: ltr;
       font-family: var(--font-icons);
