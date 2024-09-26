@@ -19,7 +19,7 @@
 
     & > * {
       padding-right: 2em;
-      color: var(--color-darkest);
+      color: var(--color-darkblue);
     }
 
     &::before {
@@ -29,7 +29,7 @@
     h3 {
       padding-top: var(--size-m);
       margin-bottom: var(--size-s);
-      color: var(--color-darkblue);
+      color: var(--color-darkest);
     }
 
     p {

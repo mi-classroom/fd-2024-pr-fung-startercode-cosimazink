@@ -10,7 +10,7 @@
 
   .title {
     margin-bottom: var(--size-m);
-    color: var(--decoration-color);
+    color: var(--color-green);
     font-size: var(--size-l);
     font-weight: var(--fw-medium);
   }

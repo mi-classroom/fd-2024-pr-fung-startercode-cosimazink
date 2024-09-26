@@ -156,12 +156,12 @@ strong {
 }
 
 a {
-  color: var(--interaction-color);
+  color: var(--color-pink);
   text-decoration: none;
 }
 
 a:not(.wrap) {
-  border-bottom: solid 2px var(--decoration-color);
+  border-bottom: solid 2px var(--color-green);
   font-weight: var(--fw-medium);
   text-decoration: none;
   transition: all 0.3s;
