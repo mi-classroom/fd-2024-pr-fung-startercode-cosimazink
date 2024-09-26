@@ -1,5 +1,12 @@
 /* Work Overview
 ############################################################################ */
+.loadMoreBtn {
+    padding: var(--size-xs);
+    border-radius: 3%;
+    margin-top: var(--size-m);
+    background-color: var(--color-pink);
+    color: var(--color-lightest);
+}
 
 .work-overview {
     display: flex;
@@ -39,14 +46,6 @@
     .info {
         color: var(--color-pink);
     }
-}
-
-.loadMoreBtn {
-    padding: var(--size-xs);
-    border-radius: 3%;
-    margin-top: var(--size-m);
-    background-color: var(--color-pink);
-    color: var(--color-lightest);
 }
 
 @media screen and (max-width: 1000px) {

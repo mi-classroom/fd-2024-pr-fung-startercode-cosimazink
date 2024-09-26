@@ -1,2 +1,24 @@
 /* Work Result
 ############################################################################ */
+
+.img-docu {
+    width: 50%;
+}
+
+.text-info {
+    
+    div {
+        display: flex;
+        flex-direction: row;
+        gap: var(--size-s);
+        border-top: solid 2px var(--color-green);
+    }
+
+    p {
+        margin-top: var(--size-s);
+
+        a {
+            border: 0;
+        }
+    }
+}

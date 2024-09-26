@@ -8,29 +8,27 @@ const dynamicItems = () => {
             const container = document.querySelector('[data-js-finished-works]');
             const loadMoreBtn = document.querySelector('.loadMoreBtn');
 
-            // Prüfen, ob Container existiert
             if (!container) {
                 console.error('Das Container-Element "[data-js-finished-works]" wurde nicht gefunden.');
                 return;
             }
 
-            // Prüfen, ob Button existiert
             if (!loadMoreBtn) {
                 console.error('Der Button mit Klasse "loadMoreBtn" wurde nicht gefunden.');
                 return;
             }
 
-            // Function to create cards HTML
             const createCardsHtml = (items) => {
                 return items.map(item => {
                     const dateObj = new Date(item.date);
                     const month = dateObj.toLocaleString('de-DE', { month: 'long' });
                     const year = dateObj.getFullYear();
 
-                    const imgSrc = item.image ? item.image : "default-image-path.jpg"; // Use default placeholder if no image
+                    const imgSrc = item.image ? item.image : "default-image-path.jpg"; 
 
                     return `
                         <li>
+                            <a href="/works/n-pola-can-i-cai.html">
                             <figure class="work-item">
                                 <img src="${imgSrc}" alt="${item.title}">
                                 <figcaption class="overview-text">
@@ -38,29 +36,24 @@ const dynamicItems = () => {
                                     <p class="info">${item.author}, ${item.type}, ${month} ${year}</p>
                                 </figcaption>
                             </figure>
+                            </a>
                         </li>
                     `;
                 }).join("");
             };
 
-            // Slice the last 4 items for initial display
             const initialItems = jsonData.slice(-4);
-            
-            // Remaining items
             const remainingItems = jsonData.length > 4 ? jsonData.slice(0, -4) : [];
-
-            // Display initial cards
             container.innerHTML = createCardsHtml(initialItems);
 
-            // Display the button only if there are more than 4 items
             if (remainingItems.length > 0) {
                 loadMoreBtn.style.display = 'block';
                 loadMoreBtn.addEventListener('click', () => {
                     container.innerHTML += createCardsHtml(remainingItems);
-                    loadMoreBtn.style.display = 'none'; // Hide the button after loading more items
+                    loadMoreBtn.style.display = 'none';
                 });
             } else {
-                loadMoreBtn.style.display = 'none'; // If no remaining items, hide the button
+                loadMoreBtn.style.display = 'none';
             }
         }).catch(function (error) {
             console.error('Fehler beim Verarbeiten der JSON-Daten:', error);
