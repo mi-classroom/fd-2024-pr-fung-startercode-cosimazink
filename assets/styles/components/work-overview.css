@@ -1,2 +1,56 @@
 /* Work Overview
 ############################################################################ */
+
+.work-overview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--size-s);
+}
+
+.work-overview li {
+    flex: 1 1 calc(50% - 1em);
+    padding: var(--size-s);
+    border-bottom: solid 3px var(--color-pink);
+    background: #fff;
+}
+
+.work-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: var(--size-s);
+}
+
+.work-item img {
+    width: 130px;
+    height: 100px;
+    margin-right: var(--size-s);
+    object-fit: cover;
+}
+
+.overview-text {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+        color: var(--color-darkblue);
+        font-weight: var(--fw-medium);
+    }
+
+    .info {
+        color: var(--color-pink);
+    }
+}
+
+.loadMoreBtn {
+    padding: var(--size-xs);
+    border-radius: 3%;
+    margin-top: var(--size-m);
+    background-color: var(--color-pink);
+    color: var(--color-lightest);
+}
+
+@media screen and (max-width: 1000px) {
+    .work-overview li {
+        flex: 100%;
+    }
+}
