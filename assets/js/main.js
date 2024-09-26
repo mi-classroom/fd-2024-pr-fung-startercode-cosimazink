@@ -1,4 +1,5 @@
 import { slideshow } from './modules/slideshow.js';
+import { dynamicItems } from './modules/dynamicItems.js'; 
 
 /* Main
 ############################################################################ */
@@ -6,4 +7,5 @@ import { slideshow } from './modules/slideshow.js';
 document.addEventListener('DOMContentLoaded', function() {
   hljs.highlightAll();
   slideshow();
+  dynamicItems();
 });
