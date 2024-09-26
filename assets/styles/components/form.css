@@ -3,3 +3,32 @@
 
 /* Form
 ############################################################################ */
+
+.thema-vorschlagen {
+    h2 {
+        margin-bottom: var(--size-l);
+    }
+}
+
+.formbox {
+    margin-top: var(--size-l);
+    margin-bottom: var(--size-m);
+}
+
+.form-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: solid 2px var(--color-green);
+    margin-bottom: var(--size-m);
+
+    input, textarea {
+        align-self: flex-end;
+    }
+}
+
+.submit-button {
+    padding: var(--size-xs);
+    border-radius: 3%;
+    background-color: var(--color-pink);
+}
